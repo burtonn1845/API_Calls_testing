@@ -1,14 +1,15 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+    <ion-title>Some random garbage up here</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content padding class="home">
+<ion-grid *ngIf="product">
+  <ion-row *ngFor="let products of product">
+    <ion-col width-50 offset-25>
+      <h2 class="temp">Product Name: {{products.name}} Product Cost: {{products.cost}}</h2>
+    </ion-col>
+  </ion-row>
+</ion-grid>
 </ion-content>
